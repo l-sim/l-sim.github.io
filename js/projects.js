@@ -49,10 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /*
       Reads data-preview-color and (optionally) data-preview-img from each
       .project-row, then wires up the .project-row-preview-inner panel.
-  
-      To add a real image to a row later, just add:
-        data-preview-img="images/your-image.jpg"
-      to the <a class="project-row"> element — no JS changes needed.
     */
 
   document.querySelectorAll(".project-row").forEach((row) => {

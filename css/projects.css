@@ -42,10 +42,7 @@
 }
 
 /*
-  The row uses a 5-column grid:
-    [num] [info] [meta] [-----preview-----]
-  The preview column starts at 0 width and expands on hover.
-  overflow: hidden clips the preview as it grows in.
+  The row uses a 5-column grid
 */
 .project-row {
   display: grid;
@@ -66,7 +63,6 @@
   background: var(--grey-100);
 }
 
-/* Give inner cells padding so they don't need it on the row itself */
 .project-row-num {
   font-family: var(--font-display);
   font-size: 11px;
@@ -145,11 +141,9 @@
    ============================================================ */
 
 .project-row-preview {
-  /* Fills the 4th grid column, which animates from 0 → 380px */
   width: 100%;
   overflow: hidden;
   position: relative;
-  /* Slight fade-in delayed to let the width animate first */
   opacity: 0;
   transition: opacity 0.3s ease 0.1s;
 }
@@ -158,13 +152,11 @@
   opacity: 1;
 }
 
-/* The inner div is the actual visible panel.
-   It's always 380px wide so it can slide in as the column opens. */
 .project-row-preview-inner {
   position: absolute;
   inset: 0;
   width: 380px;
-  background: var(--blue-mid); /* overridden per-row by JS */
+  background: var(--blue-mid);
   overflow: hidden;
   border-left: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -183,7 +175,6 @@
   z-index: 0;
 }
 
-/* Placeholder label centered in the panel */
 .project-row-preview-inner::after {
   content: "[ preview ]";
   position: absolute;
@@ -200,7 +191,6 @@
   z-index: 1;
 }
 
-/* When a real <img> is injected by JS, hide the pseudo placeholder text */
 .project-row-preview-inner img {
   position: absolute;
   inset: 0;
@@ -211,7 +201,6 @@
   z-index: 2;
 }
 
-/* Yellow corner accent on the preview panel */
 .project-row-preview-inner .preview-corner {
   position: absolute;
   bottom: 12px;
@@ -488,7 +477,6 @@
   color: var(--blue-bright);
 }
 
-/* Image placeholder (used in case studies) */
 .img-placeholder {
   background: var(--grey-100);
   display: flex;
@@ -518,7 +506,7 @@
     grid-template-columns: 32px 1fr !important;
     transition: background 0.2s;
   }
-  /* Hide meta and preview on mobile */
+
   .project-row-meta,
   .project-row-preview {
     display: none;

@@ -1,6 +1,5 @@
 /* ============================================================
    HOME PAGE — Specific Styles
-   Hero: two-column editorial layout with live project cards
    ============================================================ */
 
 /* ---- HERO ---- */
@@ -252,7 +251,6 @@
   transform: scale(1.06);
 }
 
-/* Striped placeholder — shows when image fails or is missing */
 .hpc-img-placeholder {
   width: 100%;
   min-height: 118px;
