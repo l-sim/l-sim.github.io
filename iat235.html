@@ -35,11 +35,12 @@
       <!-- ============ CASE HERO ============ -->
       <section class="case-hero">
         <div class="case-hero-inner case-hero-inner--with-image">
+          <!-- Left column: all text content -->
           <div class="hero-text-col">
             <a href="projects.html" class="case-hero-back">← All Projects</a>
 
             <div class="reveal">
-              <!-- Featured badge -->
+              <!-- Featured badge — emphasizes the data point -->
               <div style="margin-bottom: 16px">
                 <span class="chip">✦ Featured: SIAT Spring 2025 Showcase</span>
               </div>
@@ -94,17 +95,57 @@
         <!-- SUMMARY -->
         <div class="reveal">
           <span class="case-section-marker" data-num="00">Overview</span>
-          <h2 class="case-h2">Problem + Outcome</h2>
+          <h2 class="case-h2">Context, Problem &amp; Outcome</h2>
 
           <div
             style="
               display: grid;
-              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr 1fr 1fr;
               gap: 24px;
               margin: 24px 0;
             "
             class="stagger-group"
           >
+            <!-- Context card -->
+            <div
+              class="stagger-child"
+              style="
+                background: var(--grey-700);
+                padding: 28px;
+                border-radius: 12px;
+                color: var(--white);
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 11px;
+                  font-weight: 700;
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  color: var(--yellow);
+                  margin-bottom: 12px;
+                "
+              >
+                Context
+              </div>
+              <p
+                style="
+                  font-size: 14px;
+                  line-height: 1.75;
+                  color: var(--grey-200);
+                "
+              >
+                This project began as an academic initiative at Simon Fraser
+                University's School of Interactive Arts and Technology (SIAT).
+                Through conversations with peers and by reviewing online
+                discussions, we recognized that the challenges we were exploring
+                extended beyond the classroom and reflected issues within the
+                student community.
+              </p>
+            </div>
+
+            <!-- Problem card -->
             <div
               class="stagger-child"
               style="
@@ -129,16 +170,20 @@
               </div>
               <p
                 style="
-                  font-size: 15px;
+                  font-size: 14px;
                   line-height: 1.75;
                   color: var(--grey-200);
                 "
               >
-                Students and faculty at SIAT face challenges with issue
-                reporting, making it difficult for students to communicate and
-                for faculty to address recurring problems effectively.
+                Students and faculty at the School of Interactive Arts and
+                Technology (SIAT) at Simon Fraser University face challenges
+                with issue reporting, making it difficult for students to
+                communicate concerns and for faculty to effectively address
+                recurring problems.
               </p>
             </div>
+
+            <!-- Outcome card -->
             <div
               class="stagger-child"
               style="
@@ -163,17 +208,202 @@
               </div>
               <p
                 style="
-                  font-size: 15px;
+                  font-size: 14px;
                   line-height: 1.75;
                   color: var(--grey-200);
                 "
               >
-                An issue-reporting platform optimized for web and mobile that
-                supports community-driven problem-solving — enabling students to
-                submit issues while giving faculty clearer insight.
+                We designed an issue-reporting platform optimized for web and
+                mobile that supports community-driven problem-solving, enabling
+                students to submit issues while giving faculty clearer, more
+                actionable insight.
               </p>
             </div>
           </div>
+        </div>
+
+        <!-- RESEARCH QUESTIONS -->
+        <div class="reveal" style="margin-top: 48px">
+          <span class="case-section-marker" data-num="00b">Research Questions</span>
+          <h2 class="case-h2">Guiding Questions</h2>
+          <p class="case-p">
+            To focus our research and design efforts, we established three 
+             questions that shaped our approach throughout the project.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                background: var(--grey-100);
+                border: 1px solid var(--border);
+                border-left: 4px solid var(--blue-bright);
+                border-radius: 8px;
+                padding: 20px 24px;
+              "
+            >
+              <p style="font-size: 15px; line-height: 1.7; color: var(--blue-dark); margin: 0;">
+                How might we ensure that student-reported issues are
+                <strong>clearly and effectively communicated?</strong>
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                background: var(--grey-100);
+                border: 1px solid var(--border);
+                border-left: 4px solid var(--yellow);
+                border-radius: 8px;
+                padding: 20px 24px;
+              "
+            >
+
+              <p style="font-size: 15px; line-height: 1.7; color: var(--blue-dark); margin: 0;">
+                How might we support SFU SIAT staff in addressing issues so they
+                are <strong>resolved and do not reoccur</strong> for students?
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                background: var(--grey-100);
+                border: 1px solid var(--border);
+                border-left: 4px solid var(--grey-700);
+                border-radius: 8px;
+                padding: 20px 24px;
+              "
+            >
+
+              <p style="font-size: 15px; line-height: 1.7; color: var(--blue-dark); margin: 0;">
+                How might we <strong>reduce reliance on unstable or unintuitive platforms</strong>
+                (e.g., Canvas) to create a more seamless and accessible UX/UI experience
+                for both students and staff?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="case-divider" />
+
+        <!-- MIND MAP -->
+        <div class="reveal">
+          <span class="case-section-marker" data-num="00c">Problem Space</span>
+          <h2 class="case-h2">Mind Mapping</h2>
+          <p class="case-p">
+            We created a mind map to explore the range of challenges students and
+            faculty face, helping us break down the problem space and identify key
+            themes. This process allowed us to compare different directions and
+            narrow in on the most relevant and impactful issue to focus on. It
+            served as a visual tool to guide our decision-making and align the team
+            on our final problem choice.
+          </p>
+        </div>
+
+        <div class="case-img reveal">
+          <div class="img-placeholder"  height: auto; margin-left: 20px; margin-right: 20px;">
+            <img src="Reporting/mindmap.png" alt="Mind Map">
+          </div>
+        </div>
+        <p class="case-caption">Problem space mind map exploring student and faculty challenges</p>
+
+        <hr class="case-divider" />
+
+        <!-- REDDIT AUDIT RATIONALE -->
+        <div
+          class="reveal"
+          style="
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+            border-radius: 16px;
+            padding: 36px 40px;
+            margin: 0 0 40px;
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <!-- Decorative background detail -->
+          <div
+            aria-hidden="true"
+            style="
+              position: absolute;
+              top: -40px;
+              right: -40px;
+              width: 180px;
+              height: 180px;
+              border-radius: 50%;
+              border: 2px solid rgba(245, 197, 24, 0.15);
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            aria-hidden="true"
+            style="
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              border: 2px solid rgba(245, 197, 24, 0.1);
+              pointer-events: none;
+            "
+          ></div>
+
+          <div
+            style="
+              font-family: var(--font-display);
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: var(--yellow);
+              margin-bottom: 12px;
+            "
+          >
+            ✦ Why Reddit?
+          </div>
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 22px;
+              font-weight: 800;
+              color: var(--white);
+              margin-bottom: 16px;
+              letter-spacing: -0.01em;
+            "
+          >
+            Auditing an Existing Platform
+          </h3>
+          <p
+            style="
+              font-size: 15px;
+              line-height: 1.8;
+              color: var(--grey-200);
+              max-width: 760px;
+              position: relative;
+              z-index: 1;
+            "
+          >
+            We audited Reddit to inform the design of a forum-style platform
+            aimed at improving communication between students and faculty. Because
+            Reddit is a platform many users are already comfortable with, it
+            allowed us to build on existing mental models and design for ease of
+            use. This aligned with our research goals of creating a space where
+            users could raise concerns, engage in discussions, and see how
+            feedback is addressed. Key insights — such as the importance of
+            <strong style="color: var(--white)">searchability</strong>,
+            <strong style="color: var(--white)">clear authorship</strong>, and
+            <strong style="color: var(--white)">interactive threads</strong> —
+            helped reduce duplicate issues and informed an interface focused on
+            accessible, collaborative problem-solving.
+          </p>
         </div>
 
         <hr class="case-divider" />
@@ -191,10 +421,12 @@
           duplicate issues and encouraged community engagement around a single
           topic.
         </p>
+
+        <!-- Placeholder for Reddit analysis image -->
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 600px">
             <img
-              src="/Reporting/singlepost.png"
+              src="Reporting/singlepost.png"
               alt="Analysis of Reddit Single Post"
             />
           </div>
@@ -210,10 +442,11 @@
           activity.
         </p>
 
+        <!-- Placeholder for profile analysis image -->
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 430px">
             <img
-              src="/Reporting/userprofile.png"
+              src="Reporting/userprofile.png"
               alt="Analysis of User Profile"
             />
           </div>
@@ -231,9 +464,9 @@
         </p>
 
         <div class="case-img reveal">
-          <div class="img-placeholder" style="height: 800px">
+          <div class="img-placeholder" style="height: 320px">
             <img
-              src="/Reporting/mappeduserstory.png"
+              src="Reporting/mappeduserstory.png"
               alt="Analysis of User Profile"
             />
           </div>
@@ -251,7 +484,7 @@
 
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 600px">
-            <img src="/Reporting/flow.png" alt="Analysis of User Profile" />
+            <img src="Reporting/flow.png" alt="Analysis of User Profile" />
           </div>
         </div>
 
@@ -271,7 +504,7 @@
 
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 590px">
-            <img src="/Reporting/designsystem.png" alt="Analysis of User Profile" />
+            <img src="Reporting/designsystem.png" alt="Analysis of User Profile" />
           </div>
           </div>
         </div>
@@ -292,7 +525,7 @@
         </p>
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 460px">
-            <img src="Reporting/landingpage.png" alt="Landing Page Design">
+            <img src="Reporting/Desktop Landing Page.png" alt="Landing Page Design">
           </div>
         </div>
 
@@ -304,7 +537,7 @@
         </p>
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 460px">
-            <img src="/Reporting/faqpaeg.png" alt="FAQ Page Design">
+            <img src="Reporting/faqpaeg.png" alt="FAQ Page Design">
           </div>
         </div>
 
@@ -316,7 +549,7 @@
         </p>
         <div class="case-img reveal">
           <div class="img-placeholder" style="height: 500px">
-            <img src="/Reporting/profilepage.png" alt="Profile Page Design">
+            <img src="Reporting/profilepage.png" alt="Profile Page Design">
           </div>
         </div>
 
@@ -370,13 +603,15 @@
             </div>
           </li>
         </ul>
+
+        <!-- Callout: emphasize the showcase output as a data point -->
         <div class="callout reveal" style="margin-top: 32px">
           <p>
             <strong
               >This project was featured on the Spring 2025 SIAT
               Showcase</strong
             >
-            this is recognition that the platform met academic and
+            — recognition that the platform successfully met academic and
             real-world design standards.
             <a
               href="https://www.sfu.ca/siat/showcase/spring-2025-project-showcase/iat-235-issue-reporting-platform-for-siat-students.html"
@@ -415,6 +650,7 @@
             >Resume ↗</a
           >
         </nav>
+        <!-- Social icon links — update hrefs with your actual profiles -->
         <div class="footer-socials">
           <!-- LinkedIn -->
           <a
@@ -432,7 +668,7 @@
 
           <!-- GitHub -->
           <a
-            href="https://github.com/l-sim"
+            href="https://github.com/larainesim"
             target="_blank"
             class="footer-social-link"
             aria-label="GitHub"
