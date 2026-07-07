@@ -1,118 +1,178 @@
 /* ============================================================
-   ABOUT PAGE — Styles
+   ABOUT PAGE — Styled to match reference layout
    ============================================================ */
 
-/* ---- HERO ---- */
+/* ---- HERO: text left, photo right ---- */
 .about-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  padding: 80px 48px 40px;
+  gap: 80px;
+  padding: 80px 80px 60px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
+  align-items: start;
+}
+
+.about-hero-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .about-intro {
-  font-size: 17px;
+  font-size: 15px;
   color: var(--grey-700);
-  line-height: 1.8;
-  max-width: 520px;
-  margin-top: 20px;
+  line-height: 1.85;
+  margin-bottom: 16px;
+  font-weight: 300;
 }
 
-.about-intro strong {
-  color: var(--blue-dark);
+.about-intro a {
+  color: var(--blue-bright);
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
 }
+.about-intro a:hover { color: var(--blue-dark); }
 
-/* ---- PHOTO ---- */
-.about-photo {
-  position: relative;
-}
-
-.photo-frame {
-  border-radius: 12px;
+/* Inline image within text column (BC bridge photo) */
+.about-inline-img {
+  border-radius: 10px;
   overflow: hidden;
-  border: 3px solid var(--blue-mid);
+  margin: 24px 0;
+  max-height: 200px;
+}
+.about-inline-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ---- PHOTO (right column) ---- */
+.about-photo-col {
+  position: sticky;
+  top: calc(var(--nav-h) + 32px);
+}
+
+.about-photo-frame {
+  border-radius: 16px;
+  overflow: hidden;
   box-shadow: var(--shadow-xl);
-  position: relative;
+  border: 3px solid var(--grey-200);
+  aspect-ratio: 3/4;
 }
 
-/* Decorative corner accent */
-.photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(37, 99, 235, 0.08) 0%,
-    transparent 50%
-  );
-  z-index: 1;
-  pointer-events: none;
+.about-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ---- INTERESTS ---- */
+/* ---- INTERESTS SECTION ---- */
 .interests-section {
-  background: var(--grey-100);
-  border-top: 1px solid var(--border);
+  padding: 80px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 56px;
+}
+
+/* Each interest block: heading + text left, image right */
+.interest-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 24px;
+  align-items: start;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
 }
 
-.interest-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s, box-shadow 0.25s;
+.interest-block:last-child { border-bottom: none; }
+
+.interest-block-text { }
+
+.interest-block h3 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
 }
 
-.interest-card:hover {
-  transform: translateY(-4px);
+.interest-block h3.yellow { color: var(--yellow); }
+.interest-block h3.blue   { color: var(--blue-dark); }
+
+.interest-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--grey-700);
+  font-weight: 300;
+}
+
+.interest-block p a {
+  color: var(--blue-bright);
+  font-weight: 600;
+}
+
+.interest-block-img {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.interest-block-img img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
   box-shadow: var(--shadow-md);
 }
 
-.interest-icon {
-  font-size: 28px;
-  display: block;
-  margin-bottom: 12px;
+/* Square / portrait variant for Trekkie image */
+.interest-block-img--tall img {
+  height: 140px;
+  border-radius: 12px;
 }
 
-.interest-card h4 {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-bottom: 8px;
-}
-
-.interest-card p {
-  font-size: 13px;
-  color: var(--grey-700);
-  line-height: 1.7;
+/* ---- CTA ---- */
+.about-cta {
+  text-align: center;
+  padding: 80px 48px;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  margin-top: 0;
 }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 900px) {
   .about-hero {
     grid-template-columns: 1fr;
-    padding: 48px 24px 24px;
+    padding: 48px 24px 40px;
     gap: 40px;
   }
-  .about-photo {
+  .about-photo-col {
     order: -1;
+    position: static;
   }
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .about-photo-frame {
+    aspect-ratio: 4/3;
+  }
+  .interests-section {
+    padding: 60px 24px;
   }
   .interest-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .interest-block {
+    grid-template-columns: 1fr auto;
   }
 }
